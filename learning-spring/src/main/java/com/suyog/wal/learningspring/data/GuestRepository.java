@@ -1,4 +1,4 @@
-package com.suyog.wal.data;
+package com.suyog.wal.learningspring.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

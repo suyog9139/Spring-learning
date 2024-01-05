@@ -1,4 +1,4 @@
-package com.suyog.wal.data;
+package com.suyog.wal.learningspring.data;
 
 import java.util.Date;
 
@@ -10,52 +10,58 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "RESERVATION")
+@Table(name="RESERVATION")
 public class Reservation {
-
-
     @Id
-    @Column(name = "RESERVATION_ID")
+    @Column(name="RESERVATION_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long reservationId;
-    @Column(name = "ROOM_ID")
+    @Column(name="ROOM_ID")
     private long roomId;
     @Column(name="GUEST_ID")
     private long guestId;
     @Column(name="RES_DATE")
-    private Date reservatioDate;
-    
+    private Date reservationDate;
+
     public long getReservationId() {
         return reservationId;
     }
+
     public void setReservationId(long reservationId) {
         this.reservationId = reservationId;
     }
+
     public long getRoomId() {
         return roomId;
     }
+
     public void setRoomId(long roomId) {
         this.roomId = roomId;
     }
+
     public long getGuestId() {
         return guestId;
     }
+
     public void setGuestId(long guestId) {
         this.guestId = guestId;
     }
-    public Date getReservatioDate() {
-        return reservatioDate;
+
+    public Date getReservationDate() {
+        return reservationDate;
     }
-    public void setReservatioDate(Date reservatioDate) {
-        this.reservatioDate = reservatioDate;
+
+    public void setReservationDate(Date reservationDate) {
+        this.reservationDate = reservationDate;
     }
+
     @Override
     public String toString() {
-        return "Reservation [reservationId=" + reservationId + ", roomId=" + roomId + ", guestId=" + guestId
-                + ", reservatioDate=" + reservatioDate + "]";
+        return "Reservation{" +
+                "reservationId=" + reservationId +
+                ", roomId=" + roomId +
+                ", guestId=" + guestId +
+                ", reservationDate=" + reservationDate +
+                '}';
     }
-
-    
-
-    
 }

@@ -1,4 +1,4 @@
-package com.suyog.wal.business;
+package com.suyog.wal.learningspring.business;
 
 import java.util.Date;
 

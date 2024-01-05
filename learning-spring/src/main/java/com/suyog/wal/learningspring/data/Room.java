@@ -1,4 +1,4 @@
-package com.suyog.wal.data;
+package com.suyog.wal.learningspring.data;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,42 +14,52 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ROOM_ID")
     private long id;
-    @Column(name = "Name")
+    @Column(name="NAME")
     private String name;
     @Column(name="ROOM_NUMBER")
-    private long roomNumber;
-    @Column(name = "BED_INFO")
+    private String roomNumber;
+    @Column(name="BED_INFO")
     private String bedInfo;
+
     public long getId() {
         return id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public long getRoomNumber() {
+
+    public String getRoomNumber() {
         return roomNumber;
     }
-    public void setRoomNumber(long roomNumber) {
+
+    public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
+
     public String getBedInfo() {
         return bedInfo;
     }
+
     public void setBedInfo(String bedInfo) {
         this.bedInfo = bedInfo;
     }
+
     @Override
     public String toString() {
-        return "Room [id=" + id + ", name=" + name + ", roomNumber=" + roomNumber + ", bedInfo=" + bedInfo + "]";
+        return "Room{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", roomNumber='" + roomNumber + '\'' +
+                ", bedInfo='" + bedInfo + '\'' +
+                '}';
     }
-
-    
-
-    
 }

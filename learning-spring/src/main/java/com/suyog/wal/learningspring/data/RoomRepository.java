@@ -1,4 +1,4 @@
-package com.suyog.wal.data;
+package com.suyog.wal.learningspring.data;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
